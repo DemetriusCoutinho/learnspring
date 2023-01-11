@@ -18,12 +18,12 @@ public class PessoaService {
     }
 
     public PessoaResponse salvar(PessoaRequest request) {
-        pessoaRepository.save(
+        var pessoa = pessoaRepository.save(
                 new Pessoa(
                         UUID.randomUUID(),
                         request.nome()
                 )
         );
-        return new PessoaResponse(null, request.nome());
+        return new PessoaResponse(null, pessoa.getNome());
     }
 }
