@@ -1,16 +1,16 @@
-package br.com.learnspring.resourcers;
+package br.com.learnspring.resources;
 
-import br.com.learnspring.resourcers.requests.PessoaRequest;
-import br.com.learnspring.resourcers.responses.PessoaResponse;
+import br.com.learnspring.resources.requests.PessoaRequest;
+import br.com.learnspring.resources.responses.PessoaResponse;
 import br.com.learnspring.services.PessoaService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1/pessoas")
-public class PessoaResourcer {
+public class PessoaResource {
     private final PessoaService pessoaService;
 
-    public PessoaResourcer(PessoaService pessoaService) {
+    public PessoaResource(PessoaService pessoaService) {
         this.pessoaService = pessoaService;
     }
 
